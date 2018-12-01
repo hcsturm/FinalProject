@@ -23,33 +23,28 @@
   require([
     "esri/Map",
     "esri/views/MapView",
-    "esri/layers/MapImageLayer",
+    "esri/layers/FeatureLayer",
     "esri/widgets/LayerList",
     "esri/widgets/Home"
   ], function (
     Map,
     MapView,
-    MapImageLayer,
+    FeatureLayer,
     LayerList,
     Home
   ) {
 
-    var precip = new MapImageLayer({
-      url: "https://idpgis.ncep.noaa.gov/arcgis/rest/services/NWS_Climate_Outlooks/cpc_mthly_precip_outlk/MapServer"
-    });
-
-    var drought = new MapImageLayer({
-      url: "https://idpgis.ncep.noaa.gov/arcgis/rest/services/NWS_Climate_Outlooks/cpc_drought_outlk/MapServer",
-
+    var drought = new FeatureLayer({
+      url: "https://services9.arcgis.com/Fkrv4ioSgHZRwY1o/arcgis/rest/services/CurrentTexasDroughtandLakeMap/FeatureServer/1?token=V0zS1ueODSLMjV8CwTVs7aRxpaW54oepdlAwWBvSwVKgw0IFmZTAxhsY7GC8FsZ9IrmyTwzRclSCmjAICwArUOdnU1kFVooiCcF-sTHdM6ICMCwF2FJ6LlDcev0ro5Cn3-gQE1lzeXqrfDlneLgJUhrO10KF8PrqaoIOeYlfgaAJCx04-6-U4uanpySkMuIj_d3YKfkVBsKevIVf56Ys5PASsye6qPQCYTXGV2JCzRx9NmBGtSj8OvBWpjB9zsbi",
       });
 
-    var river = new MapImageLayer({
-    	url: "https://idpgis.ncep.noaa.gov/arcgis/rest/services/NWS_Observations/ahps_riv_gauges/MapServer"
+    var lake = new FeatureLayer({
+    	url: "https://services9.arcgis.com/Fkrv4ioSgHZRwY1o/ArcGIS/rest/services/CurrentTexasDroughtandLakeMap/FeatureServer/0?token=V0zS1ueODSLMjV8CwTVs7aRxpaW54oepdlAwWBvSwVKgw0IFmZTAxhsY7GC8FsZ9IrmyTwzRclSCmjAICwArUOdnU1kFVooiCcF-sTHdM6ICMCwF2FJ6LlDcev0ro5Cn3-gQE1lzeXqrfDlneLgJUhrO10KF8PrqaoIOeYlfgaAJCx04-6-U4uanpySkMuIj_d3YKfkVBsKevIVf56Ys5PASsye6qPQCYTXGV2JCzRx9NmBGtSj8OvBWpjB9zsbi"
     });
 
     var map = new Map({
       basemap: "topo",
-      layers: [precip, drought, river]
+      layers: [drought, lake]
     });
 
     var view = new MapView({
