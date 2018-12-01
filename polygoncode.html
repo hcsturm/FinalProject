@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Area Affected</title>
+			<link href="polygon.css" type="text/css" rel="stylesheet">
+
+			<link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+  			<script src="https://js.arcgis.com/4.9/"></script>
+
+		</head>
+		<body>
+			<h1 class="title">Area Affected By Drought</h1>
+			<div id ="affected-text">
+				<p>This map displays the location of lake within Texas. Click on the area affected button to
+					calculate the area that could be affected when a drought occurs around a particular lake. In addition to drawing a polygon,
+					you can seach for a specific place using the search bar.</p>
+			</div>
+			<div id="viewDiv">
+    			<div id="draw-polygon" class="esri-widget--button esri-widget esri-interactive" title="Draw and measure polygon">
+      				<p>Click <strong id="strong">here </strong> to calculate the
+      				area affected by drought</p>
+      			</div>
+  			</div>
+  		<script type="text/javascript" src="affected.js"></script>
+    	</body>
+	</html>
