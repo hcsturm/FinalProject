@@ -1,0 +1,61 @@
+<html>
+	<head>
+
+		<!-- Title: Web Mapping -->
+		<title>River Gages Flood Stage Legend</title>
+		<!-- Author: Zach Meyer, Hannah Sturm, Daniel Rice -->
+		<!-- Produced on: 11-30-2018 -->
+		<!-- CSS Link -->
+		<link href="mainWebPageStyle.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body>
+	<div id="header">Drought Impacts Visualization Tool</div>
+		<!-- Top Navigation Pane -->
+	<div id="topnav">
+			<ul id="topnavList">
+				<li id="homePage"> <a href="mainWebPage.html">Current Levels</a></li>
+				<li id="tab1"> <a href="texasLakeLevelsWebPage.html">Texas Lake Levels</a></li>
+				<li id="tab2"> <a href="historicalLevelsWebPage.html">Historical Levels</a></li>
+				<li id="tab3"> <a href="forecastLevelsWebPage.html">Current U.S. Forecasts</a></li>
+				<li id="tab4"> <a href="referencePage.html">References</a></li>
+				<li id="tab5"> <a href="aboutTheTeam.html">About the Team</a></li>
+			</ul>
+	</div>
+
+	<div id="row">
+		<!-- Left Navigation Pane NEED TO GET HOVER DISPLAY -->
+		<div id="leftnav">
+			<h1>Drought Effects on Surface Water Resources</h1>
+				<p>Drought conditions are calculated weekly based on five key indicators and several others to determine the effects of drought on water supply, agriculture, and many other activities dependent on water resources.</p>
+				<p>See <strong>Texas Lake Levels</strong> for historical lake levels, <strong>Historical Levels</strong> for historical impacts from Texas drought on lake levels, and <strong>Current U.S. Forecasts</strong> for current forecasts for drought, precipitation, and river flood stage gages using the links at the top of the page.</p>
+				<p><strong>Current Map:</strong> Current drought impacts on major water supply lakes in Texas.</p>
+				<p>See Legends Below</p>
+			<h2>Legends</h2>
+			<p> <a href="droughtLevelsImage.html" target="_blank">Drought Intensity Levels</p>
+				<p> <a href="lakeFullImage.html" target="_blank">Lake Level Percent of Full</p>
+				<p> <a href="droughtForecastImage.html" target="_blank">Drought Forecast Levels</p>
+			<p> <a href="precipForecastImagePage.html" target="_blank">Rain Forecast Levels</p>
+				<p> <a href="riverGagesImage.html" target="_blank">River Flood Stage Levels</p>
+		</div>
+
+		<!---iframe for map contents on each page--->
+		<div id="main">
+					<iframe class="iframe-container" src="riverGagesImageFrame.html" frameborder="0"></iframe> <!--map-->
+		</div>
+	</div>
+		<!-- Footer -->
+		<footer>
+			<div id="footer">
+				<ul>
+					<li>Copyright 2018</li>
+					<li><strong>Drought Impacts Team</strong></li>
+					<li>All rights reserved</li>
+					<li id="date"> <script src="time.js"></script> </li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+	</html>

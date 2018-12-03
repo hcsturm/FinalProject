@@ -1,0 +1,21 @@
+html, body {
+	margin: 0 auto;
+	background-color: #C3CCD1;
+	color: black;
+}
+
+h1 {
+  text-align: center;
+	width: 100%;
+  font-family: Helvetica;
+	font-size: 30px;
+	color: white;
+	background-color: #b2182b
+}
+
+img {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+}
