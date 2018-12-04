@@ -10,6 +10,7 @@ require([
   	"esri/geometry/Polygon",
   	"esri/geometry/geometryEngine",
   	"esri/widgets/Search",
+  	"esri/widgets/Home",
     "esri/layers/FeatureLayer",
     "esri/layers/GraphicsLayer",
 	"esri/tasks/QueryTask",
@@ -23,7 +24,7 @@ require([
  ],
 
 function(
-	Draw, Map, MapView, Graphic, Polygon, geometryEngine, Search, FeatureLayer, GraphicsLayer,
+	Draw, Map, MapView, Graphic, Polygon, geometryEngine, Search, Home, FeatureLayer, GraphicsLayer,
 	QueryTask, Query, arrayUtils, dom, on, SpatialReference, projection) {
 
     //Lake Level and Lake Name Feature Layer
@@ -57,8 +58,14 @@ function(
 		view: view
 	});
 	//adding the search widget to the top left of the web map
-	view.ui.add(search, "top-left");
-
+	view.ui.add(search, "top-right");
+	
+	//home widget
+	var homeWidget = new Home ({
+		view: view
+	});
+	view.ui.add(homeWidget, "top-left");
+	
 	//Search for a particular named lake in the feature layer
 	search.sources.push({
 		featureLayer: featureLayer,
